@@ -60,6 +60,23 @@
 }
 
 @layer components {
+  .who-me-image::before {
+    @apply absolute blur-md scale-[2] rotate-12 translate-y-[-65%];
+    content: "sd";
+    height: 100%;
+    width: 15px;
+    bottom: 0;
+    top: 0;
+    left: -20px;
+    background: white;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .who-me-image:hover::before {
+    @apply top-[100%] left-[100%] duration-300 absolute;
+  }
+
   .smple-tex::before {
     @apply absolute;
     content: "";
