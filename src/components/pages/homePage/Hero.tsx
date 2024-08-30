@@ -38,30 +38,28 @@ const Hero = () => {
       <CarouselContent>
         {heroData.map((item, index) => (
           <CarouselItem key={index}>
-            <div className="">
-              <div
-                className="relative min-h-screen bg-cover bg-center w-full"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
-              >
-                <div className="absolute inset-0 bg-black bg-opacity-70">
-                  <div className="grid justify-center items-center min-h-screen w-full">
-                    <div className="w-[75%] text-center mx-auto">
-                      <span className="text-primary text-uppercase small tracking-[4px] block pb-4 font-weight-700">
-                        Welcome to Tiny R&amp;D
-                      </span>
+            <div
+              className="relative min-h-screen bg-cover bg-center w-full"
+              style={{
+                backgroundImage: `url(${item.image})`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-70">
+                <div className="grid justify-center items-center min-h-screen w-full">
+                  <div className="w-[75%] text-center mx-auto">
+                    <span className="text-primary text-uppercase small tracking-[4px] block pb-4 font-weight-700">
+                      Welcome to Tiny R&amp;D
+                    </span>
 
-                      <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-8xl uppercase tracking-[-3px] mb-[2rem]">
-                        {item.title}
-                      </h1>
+                    <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-8xl uppercase tracking-[-3px] mb-[2rem]">
+                      {item.title}
+                    </h1>
 
-                      <Button className="text-[17px] font-bold px-8 py-4 rounded-none hover:bg-white hover:text-black transition-colors duration-300 uppercase">
-                        <Link href="#" className="">
-                          <span>Learn More</span>
-                        </Link>
-                      </Button>
-                    </div>
+                    <Button className="text-[17px] font-bold px-8 py-4 rounded-none hover:bg-white hover:text-black transition-colors duration-300 uppercase">
+                      <Link href="#" className="">
+                        <span>Learn More</span>
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </div>

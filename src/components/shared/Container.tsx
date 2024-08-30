@@ -8,7 +8,7 @@ type TContainer = {
 
 const Container = ({ children, className }: TContainer) => {
   return (
-    <div className={cn("max-w-[1100px] mx-auto w-full px-4", className)}>
+    <div className={cn("max-w-[1340px] mx-auto w-full px-4", className)}>
       {children}
     </div>
   );

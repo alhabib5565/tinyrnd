@@ -59,6 +59,32 @@
   }
 }
 
+@layer components {
+  .smple-tex::before {
+    @apply absolute;
+    content: "";
+    height: 2px;
+    width: 80px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dedede;
+  }
+
+  .smple-tex::after {
+    @apply absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    border-radius: 50px;
+    background-color: #f00;
+    right: 0px;
+    left: auto;
+    bottom: -3px;
+    animation: 5s ease infinite alternate;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
