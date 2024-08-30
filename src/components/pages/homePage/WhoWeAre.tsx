@@ -5,18 +5,26 @@ import about1 from "../../../assets/who-we-are/about-1.jpg";
 import about2 from "../../../assets/who-we-are/about2.jpg";
 import about3 from "../../../assets/who-we-are/about3.jpg";
 import signature from "../../../assets/who-we-are/signature-2.png";
+
+//company logo
+import companyLogo5 from "../../../assets/who-we-are/compnay-logo5.png";
+import companyLogo6 from "../../../assets/who-we-are/company-logo6.png";
+import companyLogo7 from "../../../assets/who-we-are/company-logo7.png";
+import companyLogo8 from "../../../assets/who-we-are/company-logo8.png";
+
 import cto from "../../../assets/who-we-are/cto.jpg";
 
 import SectionHeader from "@/components/shared/SectionHeader";
 import { Check, Play } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 const WhoWeAre = () => {
   return (
     <div className="py-[70px] lg:py-32">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-7 items-center gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-7 items-center gap-10 pb-[70px] lg:pb-32">
           <div className="col-span-1 lg:col-span-3 grid grid-cols-2 gap-6 relative">
-            <div className="who-me-image relative col-span-2 h-[285px] rounded-lg overflow-hidden">
+            <div className="image-hover-effect relative col-span-2 h-[285px] rounded-lg overflow-hidden">
               <Image
                 style={{ height: "100%", width: "100%" }}
                 width={350}
@@ -25,7 +33,7 @@ const WhoWeAre = () => {
                 src={about1}
               />
             </div>
-            <div className="who-me-image relative col-span-1 h-[285px] rounded-lg overflow-hidden">
+            <div className="image-hover-effect relative col-span-1 h-[285px] rounded-lg overflow-hidden">
               <Image
                 style={{ height: "100%", width: "100%" }}
                 width={200}
@@ -34,7 +42,7 @@ const WhoWeAre = () => {
                 src={about2}
               />
             </div>
-            <div className="who-me-image relative col-span-1 h-[285px] rounded-lg overflow-hidden">
+            <div className="image-hover-effect relative col-span-1 h-[285px] rounded-lg overflow-hidden">
               <Image
                 style={{ height: "100%", width: "100%" }}
                 width={200}
@@ -106,6 +114,27 @@ const WhoWeAre = () => {
               </ul>
             </div>
           </div>
+        </div>
+        <hr />
+
+        <div className="pt-[70px] lg:pt-32">
+          <Marquee>
+            <div className="w-[300px]">
+              <Image height={60} width={180} src={companyLogo5} alt="" />
+            </div>
+            <div className="w-[300px]">
+              <Image height={60} width={180} src={companyLogo6} alt="" />
+            </div>
+            <div className="w-[300px]">
+              <Image height={60} width={180} src={companyLogo7} alt="" />
+            </div>
+            <div className="w-[300px]">
+              <Image height={60} width={180} src={companyLogo5} alt="" />
+            </div>
+            <div className="w-[300px]">
+              <Image height={60} width={180} src={companyLogo8} alt="" />
+            </div>
+          </Marquee>
         </div>
       </Container>
     </div>

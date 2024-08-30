@@ -60,7 +60,7 @@
 }
 
 @layer components {
-  .who-me-image::before {
+  .image-hover-effect::before {
     @apply absolute blur-md scale-[2] rotate-12 translate-y-[-65%];
     content: "sd";
     height: 100%;
@@ -73,7 +73,7 @@
     z-index: 10;
   }
 
-  .who-me-image:hover::before {
+  .image-hover-effect:hover::before {
     @apply top-[100%] left-[100%] duration-300 absolute;
   }
 
