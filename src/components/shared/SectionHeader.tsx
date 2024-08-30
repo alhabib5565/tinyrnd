@@ -15,7 +15,7 @@ const SectionHeader = ({
       <span className="smple-tex text-[15px] font-bold pb-3 mb-3 uppercase text-primary relative">
         {simpleText}
       </span>
-      <h2 className="text-[2.2rem] font-extrabold capitalize tracking-[-0.2px] pb-6">
+      <h2 className="text-[2.2rem] font-extrabold tracking-[-0.2px] pb-6">
         {boldText}
       </h2>
     </div>
