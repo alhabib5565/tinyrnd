@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="py-[70px] lg:py-32 ">
       <Container>
-        <div className="flex items-center gap-10 pb-[70px] lg:pb-32">
+        <div className="flex items-center gap-10">
           <div className="flex flex-1 gap-6 relative">
             <div className="image-hover-effect relative flex-1 rounded-lg overflow-hidden">
               <Image
