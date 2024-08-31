@@ -31,7 +31,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <div className="py-[70px] lg:py-32 bg-[#F8F9FA]">
+    <div className="pt-[70px] lg:pt-32 bg-[#F8F9FA]">
       <SectionHeader
         simpleText="Our Testimonials"
         boldText="What They’re Saying?"
@@ -74,12 +74,12 @@ const Testimonials = () => {
       </Container>
 
       <Marquee speed={100}>
-        <div className="bg-primary py-6 mt-[70px] lg:mt-32 flex text-3xl md:text-4xl lg:text-6xl text-white">
-          <h4 className="ms-2  font-[800]">
+        <div className="bg-primary py-8 mt-[70px] lg:mt-32 flex text-3xl md:text-5xl lg:text-7xl text-white">
+          <h4 className="font-[800]">
             Design &amp; Branding — Web Development — Product Design —
           </h4>
 
-          <h4 className="ms-2  font-[800]">
+          <h4 className="font-[800]">
             Mobile Application — Web Application — SEO Optimization -
           </h4>
         </div>

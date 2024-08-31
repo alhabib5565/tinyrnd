@@ -51,7 +51,7 @@ const Hero = () => {
                       Welcome to Tiny R&amp;D
                     </span>
 
-                    <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-8xl uppercase tracking-[-3px] mb-[2rem]">
+                    <h1 className="text-white font-extrabold text-4xl md:text-6xl lg:text-[105px] uppercase tracking-[-3px] mb-[2rem]">
                       {item.title}
                     </h1>
 

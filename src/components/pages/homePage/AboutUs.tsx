@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="py-[70px] lg:py-32 ">
       <Container>
-        <div className="flex items-center gap-10">
+        <div className="flex flex-col-reverse lg:flex-row lg:items-center gap-10">
           <div className="flex flex-1 gap-6 relative">
             <div className="image-hover-effect relative flex-1 rounded-lg overflow-hidden">
               <Image
@@ -74,7 +74,7 @@ const AboutUs = () => {
             </ul>
 
             {/* call and button */}
-            <div className="flex justify-between items-center pt-16 ">
+            <div className="flex justify-between items-center flex-wrap gap-4 pt-16 ">
               <div className="flex gap-4 items-center ">
                 <div className="h-14 w-14 bg-black text-white rounded-md grid place-items-center">
                   <Phone />

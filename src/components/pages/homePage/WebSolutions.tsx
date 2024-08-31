@@ -82,7 +82,7 @@ const WebSolutions = () => {
           </Accordion>
         </div>
         <div className="flex-1 image-hover-effect rounded-[17px] relative overflow-hidden">
-          <Image alt="" src={image} />
+          <Image style={{ width: "100%" }} alt="" src={image} />
         </div>
       </Container>
     </div>
