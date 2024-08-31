@@ -1,11 +1,11 @@
 "use client";
-import Container from "@/components/shared/Container";
 import PageTopSection from "@/components/shared/navbar/PageTopSection";
 import { cn, roboto } from "@/lib/utils";
 import { serviceData } from "@/staticData/serviceData";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import img from "../../assets/about-us/about-page.jpg";
+import img from "../../../assets/about-us/about-page.jpg";
+
 import { Button } from "@/components/ui/button";
 
 const AboutUsPage = () => {

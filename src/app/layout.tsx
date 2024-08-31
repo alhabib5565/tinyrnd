@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/shared/navbar/Navbar";
 import { cn, mulish } from "@/lib/utils";
-import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(mulish.className, "text-[#1f2732]")}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={cn(mulish.className, "text-[#1f2732]")}>{children}</body>
     </html>
   );
 }
