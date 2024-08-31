@@ -7,6 +7,7 @@ import { navItems } from "@/constant/navitems";
 import Link from "next/link";
 import DropDownNavItem from "./DropDownNavItem";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,6 +57,11 @@ const Navbar = () => {
               </div>
             ))}
           </div>
+          <Button className=" hidden lg:flex text-[17px] font-bold px-6 py-4 rounded-none hover:bg-black  transition-colors duration-300 uppercase">
+            <Link href="#" className="">
+              <span>Request A Demo</span>
+            </Link>
+          </Button>
         </nav>
       </Container>
     </div>

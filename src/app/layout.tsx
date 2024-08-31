@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
-import { cn } from "@/lib/utils";
+import { cn, mulish } from "@/lib/utils";
 import Footer from "@/components/shared/Footer";
-
-const mulish = Mulish({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
