@@ -77,8 +77,8 @@ export const navItems: TNavItem[] = [
     name: "Blogs",
     href: "/blogs",
   },
-  // {
-  //   name: "Contact-us",
-  //   href: "/contact-us",
-  // },
+  {
+    name: "Contact-us",
+    href: "/contact-us",
+  },
 ];
