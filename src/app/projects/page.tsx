@@ -6,8 +6,8 @@ import project3 from "../../assets/projects/project-3.jpg";
 import project4 from "../../assets/projects/project-4.jpg";
 import project5 from "../../assets/projects/project-5.jpg";
 import project6 from "../../assets/projects/project-6.jpg";
-import project7 from "../../assets/projects/project-6.jpg";
-import project8 from "../../assets/projects/project-6.jpg";
+import project7 from "../../assets/projects/project-7.jpg";
+import project8 from "../../assets/projects/project-8.jpg";
 import Container from "@/components/shared/Container";
 import Image from "next/image";
 
@@ -74,9 +74,9 @@ const ProjectPage = () => {
                 <h3 className="text-2xl text-center font-[800] mb-4">
                   {project.title}
                 </h3>
-                <h3 className="text-sm text-center font-[700] text-primary">
+                <p className="text-sm text-center font-[700] text-primary">
                   {project.subTitle}
-                </h3>
+                </p>
               </div>
             </div>
           ))}

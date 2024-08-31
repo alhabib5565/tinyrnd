@@ -74,8 +74,8 @@ export const navItems: TNavItem[] = [
     href: "/career",
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Blogs",
+    href: "/blogs",
   },
   {
     name: "Contact-us",

@@ -12,33 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const blogData = [
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-01.jpg",
-    title: "The Reasons Why We Love Web Design Agency",
-  },
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-02.jpg",
-    title: "How To Own Web Design Agency For Free",
-  },
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-03.jpg",
-    title: "Five Latest Developments In Web Agency",
-  },
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-04.jpg",
-    title: "Web Design Agency Is So Famous, But Why?",
-  },
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-05.jpg",
-    title: "5 Difficult Things About Web Design Agency",
-  },
-  {
-    image: "https://tinyrnd.com/wp-content/uploads/2023/09/blog-06.jpg",
-    title: "Here’s What No One Tells You About Web Agency",
-  },
-];
+import { blogData } from "@/staticData/blogData";
 
 const Blogs = () => {
   return (
