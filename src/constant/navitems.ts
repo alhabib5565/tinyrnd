@@ -69,10 +69,6 @@ export const navItems: TNavItem[] = [
     name: "Projects",
     href: "/projects",
   },
-  // {
-  //   name: "Career",
-  //   href: "/career",
-  // },
   {
     name: "Blogs",
     href: "/blogs",
@@ -80,5 +76,9 @@ export const navItems: TNavItem[] = [
   {
     name: "Contact-us",
     href: "/contact-us",
+  },
+  {
+    name: "Dashboard",
+    href: "/dashboard/contact-messages",
   },
 ];

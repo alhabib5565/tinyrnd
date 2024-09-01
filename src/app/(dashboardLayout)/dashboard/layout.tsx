@@ -14,8 +14,13 @@ const DashboardLayout = ({
     <div>
       <Sidebar />
       <div className="lg:ml-[300px]">
-        <div className="h-[68px] bg-gray-100"></div>
-        <div className="p-4">{children}</div>
+        <div className="h-[68px] bg-white px-4 flex items-center text-lg pl-20 lg:pl-0">
+          {" "}
+          Wellcome to tinyrnd
+        </div>
+        <div className="p-4 bg-gray-100 min-h-[calc(100vh-68px)]">
+          {children}
+        </div>
       </div>
     </div>
   );

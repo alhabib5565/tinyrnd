@@ -24,6 +24,8 @@ import {
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
+import { sendContactMessage } from "@/actions/send-contact-message";
+import { toast } from "sonner";
 const contactInfo = [
   {
     title: "Send E-Mail",
@@ -43,8 +45,19 @@ const contactInfo = [
 ];
 
 const ContactUsPage = () => {
-  const onSubmit = (data: FieldValues) => {
-    console.log(data);
+  const onSubmit = async (data: FieldValues) => {
+    try {
+      const response = await sendContactMessage(data);
+      console.log(response);
+
+      if (response?.success) {
+        toast.success(response?.message);
+      } else {
+        toast.error(response?.message || "something went wrong");
+      }
+    } catch (error: any) {
+      toast.error(error?.message || "something went wrong");
+    }
   };
   return (
     <div>

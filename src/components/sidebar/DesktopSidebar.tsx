@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 
 const DesktopSidebar = () => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <div className=" w-[300px] fixed top-0 left-0 min-h-screen overflow-y-scroll">
       <Link href="/">
