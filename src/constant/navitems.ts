@@ -17,10 +17,10 @@ export const navItems: TNavItem[] = [
         name: "About Us",
         href: "/about-us",
       },
-      // {
-      //   name: "Work Process",
-      //   href: "/work-process",
-      // },
+      {
+        name: "Work Process",
+        href: "/work-process",
+      },
       // {
       //   name: "Our Team",
       //   href: "/our-team",
