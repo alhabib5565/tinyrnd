@@ -19,12 +19,12 @@ export const navItems: TNavItem[] = [
       },
       {
         name: "Work Process",
-        href: "/work-process",
+        href: "/how-we-work",
       },
-      // {
-      //   name: "Our Team",
-      //   href: "/our-team",
-      // },
+      {
+        name: "Our Team",
+        href: "/our-team",
+      },
       // {
       //   name: "MVP Pricing Plans",
       //   href: "/pricing-page",
