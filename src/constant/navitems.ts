@@ -45,28 +45,28 @@ export const navItems: TNavItem[] = [
       },
       {
         name: "Project Management Service",
-        href: "/project-management-service",
+        href: "/services/project-management-service",
       },
       {
         name: "Fullstack Development",
-        href: "/full-stack-development",
+        href: "/services/full-stack-development",
       },
       {
         name: "Get MVP in 2 month",
-        href: "/get-mvp",
+        href: "/services/get-mvp",
       },
-      {
-        name: "Outstaffing Developers",
-        href: "/outstaffing-developers",
-      },
-      {
-        name: "UI UX Design",
-        href: "/ui-ux-design",
-      },
-      {
-        name: "Mobile App Development",
-        href: "/mobile-app-development",
-      },
+      // {
+      //   name: "Outstaffing Developers",
+      //   href: "/services/outstaffing-developers",
+      // },
+      // {
+      //   name: "UI UX Design",
+      //   href: "/services/ui-ux-design",
+      // },
+      // {
+      //   name: "Mobile App Development",
+      //   href: "/services/mobile-app-development",
+      // },
     ],
   },
   {

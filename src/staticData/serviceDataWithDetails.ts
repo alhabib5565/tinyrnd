@@ -32,7 +32,7 @@ interface Service {
   whyUs: WhyUs;
 }
 
-const serviceDataWithDetails: Service[] = [
+export const serviceDataWithDetails: Service[] = [
   {
     serviceName: "Project Management Service",
     tagline: "Expert Project Management for Technological Success.",
