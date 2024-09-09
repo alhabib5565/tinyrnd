@@ -13,7 +13,7 @@ import cIcon6 from "../assets/service-icon/c-icon-6.png";
 
 export const serviceData = [
   {
-    name: "Project Management Service",
+    name: "Project Management ",
     cIcon: cIcon1,
     icon: icon1,
     image:

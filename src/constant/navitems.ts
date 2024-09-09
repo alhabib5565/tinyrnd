@@ -35,36 +35,40 @@ export const navItems: TNavItem[] = [
       // },
     ],
   },
-  // {
-  //   name: "Services",
-  //   href: "/",
-  //   dropdown: [
-  //     {
-  //       name: "Project Management Service",
-  //       href: "/project-management-service",
-  //     },
-  //     {
-  //       name: "Fullstack Development",
-  //       href: "/full-stack-development",
-  //     },
-  //     {
-  //       name: "Get MVP in 2 month",
-  //       href: "/get-mvp",
-  //     },
-  //     {
-  //       name: "Outstaffing Developers",
-  //       href: "/outstaffing-developers",
-  //     },
-  //     {
-  //       name: "UI UX Design",
-  //       href: "/ui-ux-design",
-  //     },
-  //     {
-  //       name: "Mobile App Development",
-  //       href: "/mobile-app-development",
-  //     },
-  //   ],
-  // },
+  {
+    name: "Services",
+    href: "/",
+    dropdown: [
+      {
+        name: "Services",
+        href: "/services",
+      },
+      {
+        name: "Project Management Service",
+        href: "/project-management-service",
+      },
+      {
+        name: "Fullstack Development",
+        href: "/full-stack-development",
+      },
+      {
+        name: "Get MVP in 2 month",
+        href: "/get-mvp",
+      },
+      {
+        name: "Outstaffing Developers",
+        href: "/outstaffing-developers",
+      },
+      {
+        name: "UI UX Design",
+        href: "/ui-ux-design",
+      },
+      {
+        name: "Mobile App Development",
+        href: "/mobile-app-development",
+      },
+    ],
+  },
   {
     name: "Projects",
     href: "/projects",

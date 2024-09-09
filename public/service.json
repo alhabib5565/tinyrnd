@@ -1,0 +1,127 @@
+[
+  {
+    "serviceName": "Project Management Service",
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Project Management"
+    },
+    "mainImage": "project-management-image-url",
+    "overview": "Expert Project Management for Technological Success. As a certified project management company, we specialize in guiding technological projects to successful completion...",
+    "serviceHighlights": {
+      "title": "With our service, you can expect:",
+      "items": [
+        "Certified project management expertise",
+        "Customized project plans aligned with your goals",
+        "Regular progress reports and milestone tracking",
+        "Proactive risk management",
+        "Seamless coordination of cross-functional teams",
+        "A dedicated project manager as your single point of contact"
+      ]
+    },
+    "solutions": [
+      {
+        "title": "Best Solutions",
+        "description": "We focus on the best practices for IT solutions and services.",
+        "image": "best-solutions-image-url"
+      },
+      {
+        "title": "Best System",
+        "description": "A top-notch project management system.",
+        "image": "best-system-image-url"
+      }
+    ],
+    "brochures": [
+      {
+        "name": "Download.pdf",
+        "url": "download-pdf-url"
+      },
+      {
+        "name": "Download.txt",
+        "url": "download-txt-url"
+      }
+    ]
+  },
+  {
+    "serviceName": "Full-stack Development",
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Full-stack Development"
+    },
+    "mainImage": "fullstack-development-image-url",
+    "overview": "Comprehensive Fullstack Development by Tiny R&D. At Tiny R&D, we provide complete Full Stack Development services, offering end-to-end solutions...",
+    "serviceHighlights": {
+      "title": "Throughout the project, you can expect:",
+      "items": [
+        "Complete front-end and back-end development tailored to your business",
+        "Scalable and high-performance applications",
+        "Rigorous QA and testing processes",
+        "Regular progress updates from your dedicated project manager",
+        "Full documentation and ownership of your final product"
+      ]
+    },
+    "solutions": [
+      {
+        "title": "Best Solutions",
+        "description": "Discover the best solution for your needs.",
+        "image": "best-solutions-image-url"
+      },
+      {
+        "title": "Data Analysis",
+        "description": "Transform your data into actionable insights.",
+        "image": "data-analysis-image-url"
+      }
+    ],
+    "brochures": [
+      {
+        "name": "Download.pdf",
+        "url": "download-pdf-url"
+      },
+      {
+        "name": "Download.txt",
+        "url": "download-txt-url"
+      }
+    ]
+  },
+  {
+    "serviceName": "Get MVP in 2 months",
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Get MVP in 2 months"
+    },
+    "mainImage": "get-mvp-image-url",
+    "overview": "Get Your MVP Ready in Just 2 Months. Our streamlined approach starts with comprehensive analytics—analyzing your competitors, defining your target audience...",
+    "serviceHighlights": {
+      "title": "Working with us guarantees:",
+      "items": [
+        "A focused development process with clear milestones",
+        "Daily progress reports",
+        "Thorough QA testing",
+        "Expert UX/UI design",
+        "Direct access to developers",
+        "A dedicated project manager to keep everything on track"
+      ]
+    },
+    "solutions": [
+      {
+        "title": "Best Solutions",
+        "description": "Find the best solution with precise analysis and advanced techniques.",
+        "image": "best-solutions-image-url"
+      },
+      {
+        "title": "Best Analysis",
+        "description": "Analyze the best data by combining accurate data collection.",
+        "image": "best-analysis-image-url"
+      }
+    ],
+    "brochures": [
+      {
+        "name": "Download.pdf",
+        "url": "download-pdf-url"
+      },
+      {
+        "name": "Download.txt",
+        "url": "download-txt-url"
+      }
+    ]
+  }
+]
