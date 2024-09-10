@@ -4,6 +4,7 @@ import MyInput from "@/components/from/MyInput";
 import MyInputWithWatch from "@/components/from/MyInputWithWatch";
 import MySelect from "@/components/from/MySelect";
 import { Button } from "@/components/ui/button";
+import { useCreateUserMutation } from "@/redux/api/user.api";
 import {
   addUserFormDefaultValues,
   addUserFormValidationSchema,
@@ -11,13 +12,22 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useState } from "react";
 import { FieldValues } from "react-hook-form";
+import { toast } from "sonner";
 
 const AddUserPage = () => {
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
 
-  const onSubmit = (value: FieldValues) => {
+  const [createUser] = useCreateUserMutation();
+
+  const onSubmit = async (value: FieldValues) => {
     console.log(value);
+    const response = (await createUser(value)) as any;
+    if (response?.error) {
+      toast.error(response?.error?.data.message || "Category create failed");
+    } else {
+      toast.success(response.data.message || "User create successfull");
+    }
   };
 
   const roleOptions = [
