@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "../../assets/logo/nav-logo.png";
-import { Button } from "../ui/button";
-import { Mail } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { sidebardItems } from "@/constant/sidebarItems";
+import SidebarDropdownItem from "./SidebarDropdownItem";
+import SingleSidebarItem from "./SingleSidebarItem";
 
 const DesktopSidebar = () => {
-  const pathName = usePathname();
   return (
     <div className=" w-[300px] fixed top-0 left-0 min-h-screen overflow-y-scroll">
       <Link href="/">
@@ -21,17 +20,16 @@ const DesktopSidebar = () => {
         />
       </Link>
       <hr className=" mb-6" />
-      <Link href="/dashboard/contact-messages">
-        <Button
-          variant={
-            pathName === "/dashboard/contact-messages" ? "secondary" : "ghost"
-          }
-          className="w-full flex justify-start gap-4 capitalize text-lg"
-        >
-          <Mail size={20} />
-          Contact Messages
-        </Button>
-      </Link>
+
+      <div className="space-y-2">
+        {sidebardItems.map((item, index) => {
+          return item.nestedItems && item.nestedItems.length > 0 ? (
+            <SidebarDropdownItem item={item} key={index} />
+          ) : (
+            <SingleSidebarItem key={index} item={item} />
+          );
+        })}
+      </div>
     </div>
   );
 };

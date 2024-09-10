@@ -10,6 +10,7 @@ import project7 from "../../../assets/projects/project-7.jpg";
 import project8 from "../../../assets/projects/project-8.jpg";
 import Container from "@/components/shared/Container";
 import Image from "next/image";
+import Link from "next/link";
 
 const projectData = [
   {
@@ -62,7 +63,10 @@ const ProjectPage = () => {
       <div className="py-[70px] lg:py-32 ">
         <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 h-full">
           {projectData.map((project, index) => (
-            <div key={index} className="flex flex-col h-full">
+            <div
+              key={index}
+              className="flex flex-col h-full hover:-translate-y-2 duration-300 transition-all"
+            >
               <Image
                 height={365}
                 width={305}
@@ -71,9 +75,12 @@ const ProjectPage = () => {
                 className="h-[350px] object-cover"
               />
               <div className="bg-[#F8F9FA] p-4 flex-grow flex flex-col justify-between">
-                <h3 className="text-2xl text-center font-[800] mb-4">
+                <Link
+                  href={"#"}
+                  className="text-lg text-center font-[800] mb-4 hover:text-primary duration-300"
+                >
                   {project.title}
-                </h3>
+                </Link>
                 <p className="text-sm text-center font-[700] text-primary">
                   {project.subTitle}
                 </p>
