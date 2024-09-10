@@ -1,3 +1,4 @@
+"use client";
 import React, { HTMLInputTypeAttribute } from "react";
 import {
   FormControl,
@@ -7,19 +8,35 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
-import { useFormContext } from "react-hook-form";
+import { useFormContext, useWatch } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
-type TMyInput = {
+type TMyInputWithWatch = {
   name: string;
   label: string;
   type: HTMLInputTypeAttribute;
   placeholder: string;
   isGrid?: boolean;
+  onValueChange: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const MyInput = ({ name, label, type, placeholder, isGrid }: TMyInput) => {
+const MyInputWithWatch = ({
+  name,
+  label,
+  type,
+  placeholder,
+  isGrid,
+  onValueChange,
+}: TMyInputWithWatch) => {
   const form = useFormContext();
+  const selectValue = useWatch({
+    control: form.control,
+    name,
+  });
+
+  React.useEffect(() => {
+    onValueChange(selectValue);
+  }, [onValueChange, selectValue]);
   return (
     <FormField
       control={form.control}
@@ -60,4 +77,4 @@ const MyInput = ({ name, label, type, placeholder, isGrid }: TMyInput) => {
   );
 };
 
-export default MyInput;
+export default MyInputWithWatch;

@@ -6,19 +6,30 @@ import {
   FormLabel,
   FormMessage,
 } from "../ui/form";
-import { Input } from "../ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useFormContext } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
-type TMyInput = {
-  name: string;
+type TSelectOption = {
   label: string;
-  type: HTMLInputTypeAttribute;
-  placeholder: string;
-  isGrid?: boolean;
+  value: string;
 };
 
-const MyInput = ({ name, label, type, placeholder, isGrid }: TMyInput) => {
+type TMySelect = {
+  name: string;
+  label: string;
+  placeholder: string;
+  isGrid?: boolean;
+  options: TSelectOption[];
+};
+
+const MySelect = ({ name, label, placeholder, isGrid, options }: TMySelect) => {
   const form = useFormContext();
   return (
     <FormField
@@ -40,16 +51,26 @@ const MyInput = ({ name, label, type, placeholder, isGrid }: TMyInput) => {
             </FormLabel>
             <FormControl
               className={cn({
-                "col-span-5": isGrid,
+                "col-span-5 ": isGrid,
               })}
             >
               <div className="flex flex-col gap-2">
-                <Input
-                  type={type}
-                  className="bg-transparent"
-                  placeholder={placeholder}
+                <Select
                   {...field}
-                />
+                  value={field.value}
+                  onValueChange={field.onChange}
+                >
+                  <SelectTrigger className="w-full min-w-[300px] bg-transparent">
+                    <SelectValue placeholder={placeholder} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {options.map((opt, index) => (
+                      <SelectItem key={index} value={opt.value}>
+                        {opt.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage>{error?.message}</FormMessage>
               </div>
             </FormControl>
@@ -60,4 +81,4 @@ const MyInput = ({ name, label, type, placeholder, isGrid }: TMyInput) => {
   );
 };
 
-export default MyInput;
+export default MySelect;
