@@ -2,6 +2,8 @@ import { TSidebarItemWithDropdown } from "@/types/sidebar.type";
 import {
   LayoutDashboard,
   Mail,
+  Menu,
+  MenuSquare,
   User,
   User2,
   UserCircle,
@@ -19,6 +21,17 @@ export const sidebardItems: TSidebarItemWithDropdown[] = [
     href: "/dashboard/contact-messages",
     icon: Mail,
   },
+  // {
+  // name: "Menu",
+  // icon: Menu,
+  // nestedItems: [
+  {
+    name: "Main Menu Items",
+    href: `/dashboard/super-admin/main-menu-items`,
+    icon: MenuSquare,
+  },
+  // ],
+  // },
   {
     name: "Users",
     icon: User,

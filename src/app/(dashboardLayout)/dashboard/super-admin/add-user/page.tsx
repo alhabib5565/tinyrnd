@@ -4,6 +4,7 @@ import MyInput from "@/components/from/MyInput";
 import MyInputWithWatch from "@/components/from/MyInputWithWatch";
 import MySelect from "@/components/from/MySelect";
 import { Button } from "@/components/ui/button";
+import { roleOptions } from "@/constant/selectOptions/roleOptions";
 import { useCreateUserMutation } from "@/redux/api/user.api";
 import {
   addUserFormDefaultValues,
@@ -29,21 +30,6 @@ const AddUserPage = () => {
       toast.success(response.data.message || "User create successfull");
     }
   };
-
-  const roleOptions = [
-    {
-      label: "Super Admin",
-      value: "super-admin",
-    },
-    {
-      label: "Editor",
-      value: "editor",
-    },
-    {
-      label: "Modarator",
-      value: "modarator",
-    },
-  ];
 
   return (
     <div className="mt-10 max-w-5xl mx-auto w-full  p-6 lg:p-12 rounded-md border">

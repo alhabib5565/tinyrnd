@@ -1,22 +1,55 @@
 "use client";
-import { useGetAllUserQuery } from "@/redux/api/user.api";
+import {
+  useDeleteUserMutation,
+  useGetAllUserQuery,
+} from "@/redux/api/user.api";
+import Swal from "sweetalert2";
+
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import { TUser } from "@/types/user.type";
 import { Button } from "@/components/ui/button";
-import { Edit, View } from "lucide-react";
+import { Delete, Edit, Trash, View } from "lucide-react";
+import Link from "next/link";
 
 const AllUsersPage = () => {
   const { data, isLoading } = useGetAllUserQuery({});
-  console.log(data, "data");
+  const [deleteUser] = useDeleteUserMutation();
+  const handleDeleteUser = async (id: string) => {
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "You want to delete this?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    });
+
+    if (result.isConfirmed) {
+      const response = (await deleteUser({ id })) as any;
+      if (response?.error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: response?.error?.message || "Delete failed",
+        });
+      } else {
+        Swal.fire({
+          title: "Deleted!",
+          text: response.data.message || "User create successfull",
+          icon: "success",
+        });
+      }
+    }
+  };
+
   if (isLoading) {
     return <div className="h-screen grid place-items-center">Loading...</div>;
   }
@@ -46,11 +79,13 @@ const AllUsersPage = () => {
               </TableCell>
               <TableCell>{user.role}</TableCell>
               <TableCell className="text-right space-x-4">
-                <Button variant="outline">
-                  <View />
+                <Button onClick={() => handleDeleteUser(user._id)}>
+                  <Trash />
                 </Button>
-                <Button>
-                  <Edit />
+                <Button variant="outline" asChild>
+                  <Link href={`/dashboard/super-admin/all-users/${user._id}`}>
+                    <Edit />
+                  </Link>
                 </Button>
               </TableCell>
             </TableRow>
