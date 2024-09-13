@@ -78,15 +78,19 @@ const MainMenuItems = () => {
               </div>
               {item.dropdown && item.dropdown.length > 0 && (
                 <div className="grid grid-cols-1 gap-4 ml-4 md:ml-8 lg:ml-12 mt-4">
-                  {item.dropdown.map((item) => (
+                  {item.dropdown.map((dItem) => (
                     <div
-                      key={item._id}
+                      key={dItem._id}
                       className="bg-white border px-4 py-2 rounded-md flex justify-between items-center"
                     >
                       <div>
-                        <h2 className="text-lg font-[600]">{item.label}</h2>
-                        <p className="text-[16px]">{item.URL}</p>
+                        <h2 className="text-lg font-[600]">{dItem.label}</h2>
+                        <p className="text-[16px]">{dItem.URL}</p>
                       </div>
+                      <MenuItemDropdown
+                        _id={item._id}
+                        dropdownItemId={dItem._id}
+                      />
                     </div>
                   ))}
                 </div>

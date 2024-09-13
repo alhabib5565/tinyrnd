@@ -37,6 +37,14 @@ const mainMenuApi = baseApi.injectEndpoints({
       invalidatesTags: ["main-menu"],
     }),
 
+    deleteDropdownItem: builder.mutation({
+      query: ({ mainMenuItemId, dropdownItemId }) => ({
+        url: `/main-menus/${mainMenuItemId}/dropdown/${dropdownItemId}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["main-menu"],
+    }),
+
     getAllMainMenu: builder.query({
       query: () => ({
         url: "/main-menus",
@@ -59,5 +67,6 @@ export const {
   useGetSingleMainMenuQuery,
   useEditMainMenuMutation,
   useDeleteMainMenuMutation,
+  useDeleteDropdownItemMutation,
   useRearrangeMainMenuItemsMutation,
 } = mainMenuApi;

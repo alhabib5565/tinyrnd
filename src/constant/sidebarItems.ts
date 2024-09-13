@@ -1,5 +1,6 @@
 import { TSidebarItemWithDropdown } from "@/types/sidebar.type";
 import {
+  Layers2,
   LayoutDashboard,
   Mail,
   Menu,
@@ -15,6 +16,11 @@ export const sidebardItems: TSidebarItemWithDropdown[] = [
     name: "Dashboard",
     href: "/dashboard",
     icon: LayoutDashboard,
+  },
+  {
+    name: "Pages",
+    href: "/dashboard/super-admin/pages",
+    icon: Layers2,
   },
   {
     name: "Contact Messages",

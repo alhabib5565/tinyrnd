@@ -11,9 +11,19 @@ import {
 import { Edit, EllipsisVertical, LucideTrash } from "lucide-react";
 import Link from "next/link";
 import Swal from "sweetalert2";
-import { useDeleteMainMenuMutation } from "@/redux/api/main.menu.api";
-const MenuItemDropdown = ({ _id }: { _id: string }) => {
+import {
+  useDeleteDropdownItemMutation,
+  useDeleteMainMenuMutation,
+} from "@/redux/api/main.menu.api";
+const MenuItemDropdown = ({
+  _id,
+  dropdownItemId,
+}: {
+  _id: string;
+  dropdownItemId?: string;
+}) => {
   const [deleteMainMenu] = useDeleteMainMenuMutation();
+  const [deleteDropdownItem] = useDeleteDropdownItemMutation();
 
   const handleDeleteMainMenu = async () => {
     const result = await Swal.fire({
@@ -27,7 +37,9 @@ const MenuItemDropdown = ({ _id }: { _id: string }) => {
     });
 
     if (result.isConfirmed) {
-      const response = (await deleteMainMenu({ id: _id })) as any;
+      const response = dropdownItemId
+        ? await deleteDropdownItem({ mainMenuItemId: _id, dropdownItemId })
+        : ((await deleteMainMenu({ id: _id })) as any);
       if (response?.error) {
         Swal.fire({
           icon: "error",

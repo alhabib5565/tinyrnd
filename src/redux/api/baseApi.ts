@@ -7,5 +7,5 @@ export const baseApi = createApi({
     baseUrl: "https://tinyrnd-server.vercel.app/api/v1",
   }),
   endpoints: () => ({}),
-  tagTypes: ["user", "main-menu"],
+  tagTypes: ["user", "main-menu", "page"],
 });

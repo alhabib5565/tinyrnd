@@ -96,7 +96,7 @@ const CreateMenu = () => {
                 </div>
                 <Button
                   type="button"
-                  onClick={() => remove(index)} // Remove specific field
+                  onClick={() => remove(index)}
                   variant={"outline"}
                   className="h-12"
                 >
@@ -112,7 +112,7 @@ const CreateMenu = () => {
               }
               className="mt-2 border-dashed"
             >
-              Add Menu <Plus size={15} />
+              Add Dropdown Item <Plus size={15} />
             </Button>
           </div>
           <div className="flex justify-end mt-4">
