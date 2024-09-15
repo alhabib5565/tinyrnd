@@ -1,18 +1,18 @@
-export type TNavItem = {
+export type TNavItemForTest = {
   name: string;
   href: string;
-  dropdown?: TNavItem[];
+  dropdown?: TNavItemForTest[];
 };
 
-export type TMainMenu = {
+export type TNavItem = {
   label: string;
   URL: string;
   order: number;
-  dropdown: TMainMenu[];
+  dropdown: TNavItem[];
   _id: string;
 };
 
-export const navItems: TNavItem[] = [
+export const navItems: TNavItemForTest[] = [
   {
     name: "Home",
     href: "/",

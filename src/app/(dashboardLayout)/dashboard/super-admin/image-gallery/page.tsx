@@ -1,10 +1,10 @@
 "use client";
 import CreateImageModal from "@/components/dashboard/super-admin/imageGallery/CreateImageModal";
+import GalleryItemOptionsDropdown from "@/components/dashboard/super-admin/imageGallery/GalleryItemOptionsDropdown";
 import Loading from "@/components/shared/Loading";
 import { Button } from "@/components/ui/button";
 import { useGetAllImageGalleryItemsQuery } from "@/redux/api/image.gallery.api";
 import { TImageGalleryItem } from "@/types/ImageGallery.type";
-import Image from "next/image";
 import React, { useState } from "react";
 
 const ImageGalleryItemsPage = () => {
@@ -39,7 +39,10 @@ const ImageGalleryItemsPage = () => {
             }}
           >
             {/* Apply the gradient overlay here */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent grid items-end justify-center p-4 text-white text-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex justify-between flex-col p-4 text-white text-lg">
+              <div className="text-right">
+                <GalleryItemOptionsDropdown _id={item._id || ""} />
+              </div>
               <h3>{item.caption}</h3>
             </div>
           </div>
