@@ -41,16 +41,20 @@ const SelectForCreateOrEditMenu = ({
     <FormField
       control={control}
       name={name}
-      render={({ field, fieldState: { error } }) => {
-        return (
-          <FormItem className="flex-1">
-            <FormLabel>{label}</FormLabel>
+      render={({ field, fieldState: { error } }) => (
+        <FormItem>
+          <FormLabel>{label}</FormLabel>
+          <Select
+            disabled={disabled}
+            onValueChange={field.onChange}
+            defaultValue={field.value}
+          >
             <FormControl>
               <div className="flex flex-col gap-2">
                 <Select
-                  disabled={disabled}
-                  value={field.value || ""} // Ensure value is passed from field
-                  onValueChange={field.onChange} // Update form value on change
+                  {...field}
+                  value={field.value}
+                  onValueChange={field.onChange}
                 >
                   <SelectTrigger className="w-full min-w-[300px] bg-transparent">
                     <SelectValue placeholder={placeholder} />
@@ -66,9 +70,9 @@ const SelectForCreateOrEditMenu = ({
                 <FormMessage>{error?.message}</FormMessage>
               </div>
             </FormControl>
-          </FormItem>
-        );
-      }}
+          </Select>
+        </FormItem>
+      )}
     />
   );
 };

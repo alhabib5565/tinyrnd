@@ -1,3 +1,4 @@
+"use client";
 import CreatePageFrom from "@/components/dashboard/shared/CreatePageFrom";
 import React from "react";
 

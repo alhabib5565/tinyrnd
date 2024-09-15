@@ -18,12 +18,21 @@ import {
 } from "@/redux/api/pages.api";
 import { useRouter } from "next/navigation";
 import Loading from "@/components/shared/Loading";
+import { useEffect, useRef, useState } from "react";
+import JoditEditor from "jodit-react";
 const EditPageForm = ({ pageId }: { pageId: string }) => {
   const { data, isLoading } = useGetSinglePageQuery({ id: pageId });
+  const prevPageData = data?.data;
+
+  const editor = useRef(null);
+  const [content, setContent] = useState(prevPageData?.pageContent || "");
+
+  useEffect(() => {
+    setContent(prevPageData?.pageContent);
+  }, [prevPageData?.pageContent]);
+
   const router = useRouter();
   const [editPage] = useEditPageMutation();
-
-  const prevPageData = data?.data;
 
   if (isLoading) {
     return <Loading />;
@@ -36,6 +45,7 @@ const EditPageForm = ({ pageId }: { pageId: string }) => {
 
   const onSubmit = async (value: FieldValues) => {
     console.log(value);
+    value.pageContent = content;
     const response = (await editPage({ data: value, id: pageId })) as any;
     if (response?.error) {
       toast.error(response?.error?.data.message || "Page Edit failed");
@@ -65,9 +75,14 @@ const EditPageForm = ({ pageId }: { pageId: string }) => {
               placeholder="Path here"
               isGrid
             />
-
+            <JoditEditor
+              ref={editor}
+              value={content}
+              onBlur={(newContent) => setContent(newContent)}
+              onChange={(newContent) => setContent(newContent)}
+            />
             <div className="flex justify-end mt-4">
-              <Button>Create Page</Button>
+              <Button>Update</Button>
             </div>
           </div>
         </MyForm>

@@ -88,6 +88,13 @@ const PagesTable = () => {
                     <Edit />
                   </Link>
                 </Button>
+                <Button variant="outline" asChild>
+                  <Link
+                    href={`/dashboard/super-admin/pages/page-content/${page._id}`}
+                  >
+                    <View />
+                  </Link>
+                </Button>
               </TableCell>
             </TableRow>
           ))}

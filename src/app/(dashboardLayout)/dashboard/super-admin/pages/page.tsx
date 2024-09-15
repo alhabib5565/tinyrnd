@@ -7,7 +7,7 @@ const PagesPage = () => {
     <div>
       <DashboardPageHeader
         pageName="Pages"
-        buttonText="Create Page"
+        buttonText="Create New Page"
         href="/dashboard/super-admin/pages/create-page"
       />
       <PagesTable />

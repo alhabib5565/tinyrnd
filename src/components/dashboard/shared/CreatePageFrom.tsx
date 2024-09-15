@@ -13,12 +13,19 @@ import { toast } from "sonner";
 import DashboardPageHeader from "./DashboardPageHeader";
 import { useCreatePageMutation } from "@/redux/api/pages.api";
 import { useRouter } from "next/navigation";
+import { useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
+
 const CreatePageFrom = () => {
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
+
   const router = useRouter();
   const [createPage] = useCreatePageMutation();
 
   const onSubmit = async (value: FieldValues) => {
-    console.log(value);
+    value.pageContent = content;
     const response = (await createPage(value)) as any;
     if (response?.error) {
       toast.error(response?.error?.data.message || "Page create failed");
@@ -35,7 +42,7 @@ const CreatePageFrom = () => {
         <MyForm
           onSubmit={onSubmit}
           defaultValues={createPageFormDefaultValues}
-          resolver={zodResolver(createPageFormValidationSchema)}
+          // resolver={zodResolver(createPageFormValidationSchema)}
         >
           <div className="grid grid-cols-1 gap-4">
             <MyInput
@@ -52,7 +59,12 @@ const CreatePageFrom = () => {
               placeholder="Path here"
               isGrid
             />
-
+            <JoditEditor
+              ref={editor}
+              value={content}
+              onBlur={(newContent) => setContent(newContent)}
+              onChange={(newContent) => setContent(newContent)}
+            />
             <div className="flex justify-end mt-4">
               <Button>Create Page</Button>
             </div>

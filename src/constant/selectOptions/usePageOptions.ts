@@ -5,7 +5,7 @@ const usePageOptions = () => {
 
   const pageOptions = data?.data.map((page: any) => ({
     label: page?.pageName,
-    url: page?.url,
+    value: page?.path,
   }));
 
   return { pageOptions, pageIsLoading: isLoading };
