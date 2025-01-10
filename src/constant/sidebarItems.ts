@@ -19,6 +19,11 @@ export const sidebardItems: TSidebarItemWithDropdown[] = [
     icon: LayoutDashboard,
   },
   {
+    name: "Banner",
+    href: "/dashboard/banner",
+    icon: LayoutDashboard,
+  },
+  {
     name: "All Pages",
     href: "/dashboard/super-admin/pages",
     icon: Layers2,
@@ -33,17 +38,13 @@ export const sidebardItems: TSidebarItemWithDropdown[] = [
     href: "/dashboard/contact-messages",
     icon: Mail,
   },
-  // {
-  // name: "Menu",
-  // icon: Menu,
-  // nestedItems: [
+
   {
     name: "Main Menu Items",
     href: `/dashboard/super-admin/main-menu-items`,
     icon: MenuSquare,
   },
-  // ],
-  // },
+
   {
     name: "Users",
     icon: User,

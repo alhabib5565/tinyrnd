@@ -1,4 +1,3 @@
-import React, { HTMLInputTypeAttribute } from "react";
 import {
   FormControl,
   FormField,
@@ -10,21 +9,14 @@ import { Input } from "../ui/input";
 import { useFormContext } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
-type TMyInput = {
+type TMyFileInput = {
   name: string;
   label: string;
-  type?: HTMLInputTypeAttribute;
   placeholder?: string;
   isGrid?: boolean;
 };
 
-const MyInput = ({
-  name,
-  label,
-  type = "text",
-  placeholder,
-  isGrid,
-}: TMyInput) => {
+const MyFileInput = ({ name, label, placeholder, isGrid }: TMyFileInput) => {
   const form = useFormContext();
   return (
     <FormField
@@ -34,12 +26,12 @@ const MyInput = ({
         return (
           <FormItem
             className={cn({
-              "grid grid-cols-7 gap-4 items-center": isGrid,
+              "grid grid-cols-1 md:grid-cols-7 md:gap-4 items-center": isGrid,
             })}
           >
             <FormLabel
               className={cn({
-                "col-span-2": isGrid,
+                " md:col-span-2": isGrid,
               })}
             >
               {label}
@@ -51,10 +43,12 @@ const MyInput = ({
             >
               <div className="flex flex-col gap-2">
                 <Input
-                  type={type}
+                  type="file"
                   className="bg-transparent"
                   placeholder={placeholder || label}
-                  {...field}
+                  onChange={(e) =>
+                    field.onChange(e.target.files && e.target.files[0])
+                  }
                 />
                 <FormMessage>{error?.message}</FormMessage>
               </div>
@@ -66,4 +60,4 @@ const MyInput = ({
   );
 };
 
-export default MyInput;
+export default MyFileInput;

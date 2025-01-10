@@ -16,7 +16,6 @@ const ImageGalleryItemsPage = () => {
   if (isLoading) {
     return <Loading />;
   }
-  console.log(data.data);
   return (
     <div>
       <div className="h-14 my-6 mx-auto bg-white p-4 rounded flex items-center justify-between">

@@ -34,7 +34,7 @@ const DropDownNavItem = ({
         <div className="bg-white w-[300px] shadow-lg p-4 absolute left-0 top-[100%] flex flex-col gap-2 z-10">
           {item.dropdown?.map((subItem) => (
             <Link
-              href={subItem.URL}
+              href={subItem.href}
               key={subItem.label}
               className="hover:text-primary duration-200 transition-colors"
             >

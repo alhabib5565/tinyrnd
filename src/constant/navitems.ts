@@ -1,96 +1,96 @@
-export type TNavItemForTest = {
-  name: string;
-  href: string;
-  dropdown?: TNavItemForTest[];
-};
-
 export type TNavItem = {
   label: string;
-  URL: string;
-  order: number;
-  dropdown: TNavItem[];
-  _id: string;
+  href: string;
+  dropdown?: TNavItem[];
 };
 
-export const navItems: TNavItemForTest[] = [
+// export type TNavItem = {
+//   label: string;
+//   URL: string;
+//   order: number;
+//   dropdown: TNavItem[];
+//   _id: string;
+// };
+
+export const navItems: TNavItem[] = [
   {
-    name: "Home",
+    label: "Home",
     href: "/",
   },
   {
-    name: "About Us",
+    label: "About Us",
     href: "/about-us",
     dropdown: [
       {
-        name: "About Us",
+        label: "About Us",
         href: "/about-us",
       },
       {
-        name: "Work Process",
+        label: "Work Process",
         href: "/how-we-work",
       },
       {
-        name: "Our Team",
+        label: "Our Team",
         href: "/our-team",
       },
       // {
-      //   name: "MVP Pricing Plans",
+      //   label: "MVP Pricing Plans",
       //   href: "/pricing-page",
       // },
       // {
-      //   name: "Privacy Policy",
+      //   label: "Privacy Policy",
       //   href: "/privacy-policy-page",
       // },
     ],
   },
   {
-    name: "Services",
+    label: "Services",
     href: "/",
     dropdown: [
       {
-        name: "Services",
+        label: "Services",
         href: "/services",
       },
       {
-        name: "Project Management Service",
+        label: "Project Management Service",
         href: "/services/project-management-service",
       },
       {
-        name: "Fullstack Development",
+        label: "Fullstack Development",
         href: "/services/full-stack-development",
       },
       {
-        name: "Get MVP in 2 month",
+        label: "Get MVP in 2 month",
         href: "/services/get-mvp",
       },
       // {
-      //   name: "Outstaffing Developers",
+      //   label: "Outstaffing Developers",
       //   href: "/services/outstaffing-developers",
       // },
       // {
-      //   name: "UI UX Design",
+      //   label: "UI UX Design",
       //   href: "/services/ui-ux-design",
       // },
       // {
-      //   name: "Mobile App Development",
+      //   label: "Mobile App Development",
       //   href: "/services/mobile-app-development",
       // },
     ],
   },
   {
-    name: "Projects",
+    label: "Projects",
     href: "/projects",
   },
   {
-    name: "Blogs",
+    label: "Blogs",
     href: "/blogs",
   },
   {
-    name: "Contact-us",
+    label: "Contact-us",
     href: "/contact-us",
   },
   {
-    name: "Dashboard",
+    label: "Dashboard",
     href: "/dashboard/contact-messages",
   },
 ];

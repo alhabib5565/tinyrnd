@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import { FieldValues, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createGalleryItemFormValidationSchema } from "@/schema-with-default-value/create-ImageGalleryItemSchemaD";
-import MyModal, { TModalOpenProps } from "@/components/sidebar/MyModal";
+import MyModal, { TModalOpenProps } from "@/components/shared/MyModal";
 import { useCreateImageMutation } from "@/redux/api/image.gallery.api";
 import MyForm from "@/components/from/MyForm";
 import MyInput from "@/components/from/MyInput";
@@ -56,7 +56,7 @@ const CreateImageModal = ({
 
   return (
     <div>
-      <MyModal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Animal">
+      <MyModal isOpen={isOpen} setIsOpen={setIsOpen} title="Create Image">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-6">
             <div>

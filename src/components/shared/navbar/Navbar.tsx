@@ -7,11 +7,9 @@ import Link from "next/link";
 import DropDownNavItem from "./DropDownNavItem";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useGetAllMainMenuQuery as useGetAllNavItems } from "@/redux/api/main.menu.api";
-import { TNavItem } from "@/constant/navitems";
+import { navItems } from "@/constant/navitems";
 
 const Navbar = () => {
-  const { data, isLoading } = useGetAllNavItems({});
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
@@ -23,10 +21,6 @@ const Navbar = () => {
     setActiveDropdown((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  if (isLoading) {
-    return <div className="h-20 bg-gray-300 animate-ping"></div>;
-  }
-  const navItems = data?.data as TNavItem[];
   return (
     <div className="bg-white shadow-lg">
       <Container>
@@ -55,7 +49,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     className="block py-5 px-2 cursor-pointer uppercase text-sm font-extrabold tracking-[0.8px] hover:text-primary duration-500 transition-colors"
-                    href={item.URL}
+                    href={item.href}
                   >
                     {item.label}
                   </Link>

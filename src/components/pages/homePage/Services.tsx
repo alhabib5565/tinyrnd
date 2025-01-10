@@ -49,7 +49,7 @@ const Services = () => {
                   {service.description}
                 </p>
                 <Button variant={"destructive"}>
-                  <Link href="#">READ MORE</Link>
+                  <Link href={`services/${service.url}`}>READ MORE</Link>
                 </Button>
               </div>
             </div>

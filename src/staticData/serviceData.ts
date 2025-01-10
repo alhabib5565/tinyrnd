@@ -20,24 +20,27 @@ export const serviceData = [
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-10.jpg",
     description:
       "As a certified project management company, we specialize inguiding technological",
+    url: "project-management",
   },
   {
-    name: "Full Stake Development",
+    name: "Full Stack Development",
     cIcon: cIcon2,
     icon: icon2,
     image:
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-11.jpg",
     description:
       "We provide complete Full Stack Development services, offering end-to-end solutions designed to meet your specific business needs.",
+    url: "full-stake-development",
   },
   {
-    name: "Get MVP in 2 month",
+    name: "Get MVP in 2 months",
     cIcon: cIcon3,
     icon: icon3,
     image:
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-12.jpg",
     description:
       "Our streamlined approach starts with comprehensive analytics—analyzing your competitors, defining your target audience",
+    url: "get-mvp-in-2-months",
   },
   {
     name: "Outstaffing developers",
@@ -47,6 +50,7 @@ export const serviceData = [
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-13.jpg",
     description:
       "We offers top-tier Outstaffing services, providing you with highly skilled developers to strengthen your in-house team.",
+    url: "outstaffing-developers",
   },
   {
     name: "UI & UX Design",
@@ -56,6 +60,7 @@ export const serviceData = [
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-14.jpg",
     description:
       "At Tiny R&D, we specialize in creating intuitive and visually captivating UI & UX designs that elevate user experiences.",
+    url: "ui-&-ux-design",
   },
   {
     name: "Mobile App Development",
@@ -65,5 +70,63 @@ export const serviceData = [
       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-14.jpg",
     description:
       "We offer end-to-end Mobile App Development services, transforming your ideas into",
+    url: "mobile-app-development",
   },
 ];
+
+// export const serviceData = [
+//   {
+//     name: "Project Management",
+//     cIcon: cIcon1,
+//     icon: icon1,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-10.jpg",
+//     description:
+//       "As a certified project management company, we specialize inguiding technological",
+//   },
+//   {
+//     name: "Full Stake Development",
+//     cIcon: cIcon2,
+//     icon: icon2,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-11.jpg",
+//     description:
+//       "We provide complete Full Stack Development services, offering end-to-end solutions designed to meet your specific business needs.",
+//   },
+//   {
+//     name: "Get MVP in 2 month",
+//     cIcon: cIcon3,
+//     icon: icon3,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-12.jpg",
+//     description:
+//       "Our streamlined approach starts with comprehensive analytics—analyzing your competitors, defining your target audience",
+//   },
+//   {
+//     name: "Outstaffing developers",
+//     cIcon: cIcon4,
+//     icon: icon4,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-13.jpg",
+//     description:
+//       "We offers top-tier Outstaffing services, providing you with highly skilled developers to strengthen your in-house team.",
+//   },
+//   {
+//     name: "UI & UX Design",
+//     cIcon: cIcon5,
+//     icon: icon5,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-14.jpg",
+//     description:
+//       "At Tiny R&D, we specialize in creating intuitive and visually captivating UI & UX designs that elevate user experiences.",
+//   },
+//   {
+//     name: "Mobile App Development",
+//     cIcon: cIcon6,
+//     icon: icon6,
+//     image:
+//       "https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/service-14.jpg",
+//     description:
+//       "We offer end-to-end Mobile App Development services, transforming your ideas into",
+//   },
+// ];
